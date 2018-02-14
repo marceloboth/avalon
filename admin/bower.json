@@ -1,0 +1,6 @@
+{
+  "name": "admin",
+  "dependencies": {
+    "semantic-ui": "^2.2.14"
+  }
+}
