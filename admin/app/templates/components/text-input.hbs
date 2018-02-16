@@ -1,0 +1,17 @@
+<label>{{label}}</label>
+{{
+    one-way-input
+      data-test-text=propertyName
+      value=(get changeset propertyName)
+      update=(action (mut (get changeset propertyName)))
+      onblur=(action 'validateProperty' changeset propertyName)
+      type=type disabled=disabled
+}}
+
+<span class="help-block m-b-none">
+  {{#if (get changeset.error propertyName)}}
+    {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
+      {{error}}
+    {{/each}}
+  {{/if}}
+</span>

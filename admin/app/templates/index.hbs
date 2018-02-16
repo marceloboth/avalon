@@ -1,1 +1,98 @@
-<b>Olá</b>
+<h2>Dashboard</h2>
+<div class="ui segment">
+  <div class="ui breadcrumb">
+    <a href="#" class="section">Home</a>
+    <i class="right chevron icon divider"></i>
+    <a class="active section">Dashboard</a>
+  </div>
+</div>
+<div class="ui doubling four column grid">
+  <div class="column">
+    <div class="views">
+      <div class="icon-order"><i class="eye icon"></i></div>
+      <div class="detail"><h3>214</h3>Views</div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="orders">
+      <div class="icon-order"><i class="users icon"></i></div>
+      <div class="detail"><h3>54</h3>Customers
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="new_orders">
+      <div class="icon-order"><i class="archive icon"></i></div>
+      <div class="detail"><h3>54</h3>Orders
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="total">
+      <div class="icon-order"><i class="bar icon"></i></div>
+      <div class="detail"><h3>$5004</h3>Total
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui doubling two column grid">
+  <div class="column">
+    <div class="ui segment" style="box-shadow: none;">
+      <h3>Overview</h3>
+      <div class="ui divider"></div>
+      <script>
+        $(function () {
+$('.overview.menu .item').tab();
+});
+      </script>
+      <div class="ui overview secondary pointing menu" style="border-width: 1px;">
+        <a class="green item" data-tab="most-sold-dashboard">
+          Best sellers
+        </a>
+        <a class="green item" data-tab="most-views-dashboard">
+          Most views
+        </a>
+        <a class="green active item" data-tab="latest-dashboard">
+          Latest
+        </a>
+      </div>
+      <div class="ui tab" data-tab="most-sold-dashboard">
+        Hej
+      </div>
+      <div class="ui tab" data-tab="most-views-dashboard">
+        Hej
+      </div>
+      <div class="ui tab active" data-tab="latest-dashboard">
+        <table class="ui table stripe" style="border-radius: 0px;">
+          <tr>
+            <thead>
+              <th>Status</th>
+              <th>Order.nr</th>
+              <th>Date</th>
+              <th>Price</th>
+            </thead>
+            <td>
+              <select name="status" class="ui compact dropdown" id="selecter1">
+                <option value="1">Behandlas</option>
+                <option value="2">Bearbetas</option>
+                <option value="3">>Nekades</option>
+                <option value="4">Klar</option>
+                <option value="5">Klar/Betald</option>
+              </select>
+            </td>
+            <td>1</td>
+            <td>2016-09-09 20:02</td>
+            <td>$435</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <h3>Newsfeed</h3>
+      <div class="ui divider"></div>
+
+    </div>
+  </div>
+</div>

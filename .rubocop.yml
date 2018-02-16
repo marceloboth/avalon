@@ -1,0 +1,28 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - log/**/*
+    - scripts/**/*
+    - frontend/**/*
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  StyleGuideCopsOnly: true
+Rails:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Metrics/LineLength:
+  Max: 100
+
+Style/StructInheritance:
+  Enabled: false
+
+Style/ColonMethodCall:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
