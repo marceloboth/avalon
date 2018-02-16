@@ -4,12 +4,12 @@
     <i class="right chevron icon divider"></i>
     {{link-to "Páginas" "pages.index" class="section"}}
     <i class="right chevron icon divider"></i>
-    <a class="active section">Nova Página</a>
+    <a class="active section">Editando: {{page.title}}</a>
   </div>
 </div>
 
 <div class="ui segment">
-  <h3>Nova página</h3>
+  <h3>Edição de página</h3>
   <div class="ui divider"></div>
 
   {{
@@ -18,4 +18,3 @@
       save=(route-action "save")
   }}
 </div>
-

@@ -1,0 +1,16 @@
+<label>{{label}}</label>
+{{
+  froala-editor
+    content=(get changeset propertyName)
+    update=(action (mut (get changeset propertyName)))
+    onblur=(action 'validateProperty' changeset propertyName)
+    options=(hash heightMin=200)
+}}
+
+<span class="help-block m-b-none">
+  {{#if (get changeset.error propertyName)}}
+    {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
+      {{error}}
+    {{/each}}
+  {{/if}}
+</span>

@@ -1,1 +1,52 @@
-{{outlet}}
+<div id="holepage">
+  <div id="left-menu">
+    <div id="logo">
+      Admin
+    </div>
+    <div style="padding: 0px;">
+      <div class="ui vertical accordion menu" id="menu">
+        {{#link-to "index" class="item"}}
+          <i class="home icon"></i>
+          <div class="text">Painel</div>
+        {{/link-to}}
+        {{#link-to "pages" class="item"}}
+          <i class="block layout icon"></i>
+          <div class="text">Páginas</div>
+        {{/link-to}}
+        <a class="item" data-tab="menu">
+          <i class="align justify icon"></i>
+          <div class="text">Menu</div>
+        </a>
+       <a class="item" data-tab="appearance">
+          <i class="settings icon"></i>
+          <div class="text">Aparência</div>
+        </a>
+        <a class="item" data-tab="admins">
+          <i class="user icon"></i>
+          <div class="text">Configurações</div>
+        </a>
+        <a href="javascript:void();" id="minimize" style="text-align: center; position: relative; bottom: 0;">
+          <i class="arrow left icon" style="float: none; font-size: 13px; text-align: center; color: white;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="right">
+    <div id="top">
+      <div class="ui top right" style="float: right; margin-right: 2%; color: #333;">
+        <div class="ui simple dropdown item" style="padding: 7px; padding-top: 22px;">
+          Usuário Logado
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">Configurações</div>
+            <div class="item">Sair</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="padding-right">
+      {{outlet}}
+    </div>
+  </div>
+</div>
+{{ember-notify data-test-notify-msg messageStyle='semantic-ui'}}
