@@ -1,0 +1,7 @@
+{{link-to "Criar nova página" "pages.new" class="ui primary button"}}
+
+{{#each model as |page|}}
+  {{link-to "page.title" "page"}}
+{{else}}
+  Nenhuma página criada até o momento.
+{{/each}}

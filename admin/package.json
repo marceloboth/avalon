@@ -34,6 +34,8 @@
     "ember-cli-uglify": "^2.0.0",
     "ember-data": "~3.0.0",
     "ember-export-application-global": "^2.0.0",
+    "ember-font-awesome": "^4.0.0-rc.2",
+    "ember-froala-editor": "^2.7.5",
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",

@@ -1,0 +1,10 @@
+<h3>Nova página</h3>
+
+<p>
+  {{
+    froala-editor
+      content=model.body
+      update=(action (mut model.body))
+      options=(hash heightMin=200)
+  }}
+</p>
