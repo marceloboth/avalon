@@ -4,6 +4,7 @@ class CreatePages < ActiveRecord::Migration[5.1]
       t.string :title
       t.string :slug
       t.text :body
+      t.boolean :publicated
 
       t.timestamps
     end
