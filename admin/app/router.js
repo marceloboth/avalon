@@ -11,6 +11,11 @@ Router.map(function() {
     this.route('new');
     this.route('edit', { path: ':page_id' });
   });
+
+  this.route('categories', function() {
+    this.route('new');
+    this.route('edit', { path: ':category_id' });
+  });
 });
 
 export default Router;
