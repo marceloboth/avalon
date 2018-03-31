@@ -1,0 +1,21 @@
+<div class="ui segment">
+  <div class="ui breadcrumb">
+    {{link-to "Início" "index" class="section"}}
+    <i class="right chevron icon divider"></i>
+    {{link-to "Categorias" "categories.index" class="section"}}
+    <i class="right chevron icon divider"></i>
+    <a class="active section">Nova Categoria</a>
+  </div>
+</div>
+
+<div class="ui segment">
+  <h3>Nova categoria</h3>
+  <div class="ui divider"></div>
+
+  {{
+    forms/category-form
+      category=category
+      save=(route-action "save")
+  }}
+</div>
+

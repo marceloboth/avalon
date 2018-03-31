@@ -1,0 +1,47 @@
+<div class="ui segment">
+  <div class="ui breadcrumb">
+    {{link-to "Início" "index" class="section"}}
+    <i class="right chevron icon divider"></i>
+    <a class="active section">Categorias</a>
+  </div>
+</div>
+
+<div class="ui segment">
+  <h3>Categorias</h3>
+  <div class="ui divider"></div>
+
+  {{#if model}}
+  <div class="dataTables_wrapper no-footer">
+    <table class="pagesTable ui table striped no-footer" style="border-radius: 0px;" width="100%">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |category|}}
+          <tr class="record">
+            <td>{{category.name}}</td>
+            <td>
+              {{#link-to 'categories.edit' category}}
+                <div class="ui button icon green compact"><i class="edit icon"></i></div>
+              {{/link-to}}
+
+              <div class="ui button icon red compact">
+                <i class="trash icon" {{action 'delete' category}}></i>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+    Nenhuma página criada até o momento.
+  {{/if}}
+</div>
+
+{{link-to "Criar categoria" "categories.new" class="ui primary button"}}
+
+

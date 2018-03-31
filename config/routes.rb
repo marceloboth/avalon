@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   get 'pages/show'
+  get 'categories/show'
 
   mount_ember_app :admin, to: "admin/"
 
   namespace :api do
     namespace :v1 do
       jsonapi_resources :pages
+      jsonapi_resources :categories
     end
   end
 

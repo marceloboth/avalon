@@ -1,0 +1,21 @@
+<div class="field {{if (get changeset.error propertyName) 'error'}}">
+  <label>{{label}}</label>
+
+  {{#power-select
+    options=options
+    selected=(get changeset propertyName)
+    searchField='name'
+    searchMessage='Digite algo'
+    noMatchesMessage='Nenhum registro encontrado'
+    onchange=(action (mut (get changeset propertyName))) as |property|}}
+      {{ property.name }}
+  {{/power-select}}
+
+  <span class="help-block m-b-none select-combox">
+    {{#if (get changeset.error propertyName)}}
+      {{#each (get (get changeset.error propertyName) 'validation') as |error|}}
+        {{error}}
+      {{/each}}
+    {{/if}}
+  </span>
+</div>
