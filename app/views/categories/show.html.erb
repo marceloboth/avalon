@@ -1,2 +1,13 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1>Categoria: <%= @category.name %></h1>
+
+<% @category.pages.each do |page| %>
+  <article>
+    <h2><%= link_to page.title, url_for_page(page) %></h2>
+    <p>
+      <%= page.created_at.to_formatted_s :long %>
+    </p>
+    <%= page.body.html_safe %>
+    <hr>
+  </article>
+<% end %>
+
