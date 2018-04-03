@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'pages/show'
-  get 'categories/show'
-
   mount_ember_app :admin, to: "admin/"
 
   namespace :api do
@@ -10,6 +7,9 @@ Rails.application.routes.draw do
       jsonapi_resources :categories
     end
   end
+
+  resources :categories, only: [:show]
+  resources :pages, only: [:show]
 
   Page.where.not(slug: nil).where(publicated: true).each do |page|
     get "/#{page.slug}", controller: "pages", action: "show", id: page.id
