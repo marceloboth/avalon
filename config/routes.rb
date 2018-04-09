@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       jsonapi_resources :pages
       jsonapi_resources :categories
       jsonapi_resources :menus
+      jsonapi_resources :menu_items
     end
   end
 
